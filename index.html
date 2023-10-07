@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crud System</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="container m-auto p-4 ">
+    <h3 class="fw-bolder p-3 ">Project Mangement System</h3>
+
+    <label for="ProductNameInput"> Product Name</label>
+    <input type="text" oninput="validateProductName();" class="form-control" id="ProductNameInput">
+
+    <div id="alertMessage" class="alert-danger p-2 mt-2  d-none mx-auto w-50">
+          wrong! you must write /^[A-Z][a-z]{3,8}$/
+        
+    </div>
+
+
+
+    <label for="ProductPriceInput"> Product Price</label>
+    <input type="number" class="form-control" id="ProductPriceInput">
+
+    <label for="ProductCategortInput"> Product Categort</label>
+    <input type="text" class="form-control" id="ProductCategortInput">
+
+    <label for="ProductDescriptionInput"> Product Description</label>
+    <textarea type="text" class="form-control" id="ProductDescriptionInput"></textarea>
+
+    <button id="addBtn" onclick="addProduct();" class="btn btn-outline-info mt-4">Add Product</button>
+    <button id="updateBtn" onclick="onUpdate();" class="btn btn-outline-primary d-none mt-4">Update</button>
+
+  </div>
+
+      <div class="w-75 p-4 mx-auto">
+        <label for="search"> Search</label>
+        <input class="form-control" placeholder="search by name " oninput="searchProduct(this.value)" type="text" id="search">
+      </div>
+      <table class="table w-75 mx-auto p-3">
+        <thead>
+          <th> index </th>
+          <th> Product Name </th>
+          <th> Producr Price </th>
+          <th>Product Category</th>
+          <th> Product Description</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+
+        </tbody>
+
+
+      </table>
+
+    
+
+
+
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
